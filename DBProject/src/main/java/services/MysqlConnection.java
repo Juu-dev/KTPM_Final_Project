@@ -9,9 +9,9 @@ public class MysqlConnection {
         //String userName = "sql6415471";
         //String password = "z9UTUxedgt";
         String hostName = "localhost";
-        String dbName = "dbproject";
-        String userName = "root";
-        String password = "26072001";
+        String dbName = "ktpm_database";
+        String userName = "thongpm";
+        String password = "123456789";
         System.out.print("Lol");
         return getMysqlConnection(hostName, dbName, userName, password);
     }

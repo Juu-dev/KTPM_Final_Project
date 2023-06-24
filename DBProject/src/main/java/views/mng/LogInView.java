@@ -36,9 +36,10 @@ public class LogInView extends javax.swing.JFrame {
         txtUsername = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
-        jLabel3 = new javax.swing.JLabel();
         ShowPassword = new javax.swing.JCheckBox();
         LoginButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(909, 597));
@@ -73,8 +74,6 @@ public class LogInView extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/login.png"))); // NOI18N
-
         ShowPassword.setBackground(new java.awt.Color(82, 83, 81));
         ShowPassword.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         ShowPassword.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +89,7 @@ public class LogInView extends javax.swing.JFrame {
             }
         });
 
-        LoginButton.setBackground(new java.awt.Color(76, 175, 80));
+        LoginButton.setBackground(new java.awt.Color(67, 111, 243));
         LoginButton.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setText("Đăng nhập");
@@ -106,29 +105,40 @@ public class LogInView extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/login.png"))); // NOI18N
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("LOGIN");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtUsername)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(txtPassword)
-                    .addComponent(ShowPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(74, 74, 74))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(81, 81, 81)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(txtPassword)
+                            .addComponent(ShowPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(90, 90, 90))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(184, 184, 184)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jLabel3))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addGap(0, 73, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(132, 132, 132)
+                .addGap(69, 69, 69)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -141,22 +151,30 @@ public class LogInView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel3)
+                .addGap(0, 73, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 900, 670);
+        jPanel1.setBounds(0, 0, 910, 670);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private void login() throws ClassNotFoundException, SQLException{
-        String user = txtUsername.getText();
-        String pass = String.valueOf(txtPassword.getPassword());
-        controllers.mng.MngLoginController.mngLogin(user, pass);
-        if(controllers.mng.MngLoginController.getCheck()){
-            this.dispose();
-            new MainFrame1().setVisible(true);
+
+    private void LoginButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginButtonKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_UP)
+        ShowPassword.requestFocus();
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER)
+        try {
+            login();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(LogInView.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(LogInView.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+    }//GEN-LAST:event_LoginButtonKeyPressed
+
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         try {
             login();
@@ -167,59 +185,54 @@ public class LogInView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_LoginButtonActionPerformed
 
-    private void txtUsernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsernameKeyPressed
-       if(evt.getKeyCode() == KeyEvent.VK_ENTER || evt.getKeyCode() == KeyEvent.VK_DOWN)
-            txtPassword.requestFocus();
-    }//GEN-LAST:event_txtUsernameKeyPressed
+    private void ShowPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ShowPasswordKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER)
+        ShowPassword.doClick();
+        if(evt.getKeyCode() == KeyEvent.VK_UP)
+        txtPassword.requestFocus();
+        if(evt.getKeyCode() == KeyEvent.VK_DOWN)
+        LoginButton.requestFocus();
+    }//GEN-LAST:event_ShowPasswordKeyPressed
+
+    private void ShowPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowPasswordActionPerformed
+        if(ShowPassword.isSelected())
+        txtPassword.setEchoChar((char)0);
+        else
+        txtPassword.setEchoChar('*');
+    }//GEN-LAST:event_ShowPasswordActionPerformed
 
     private void txtPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPasswordKeyPressed
-       if(evt.getKeyCode() == KeyEvent.VK_ENTER )
-            try {
-                login();
-       } catch (ClassNotFoundException ex) {
-           Logger.getLogger(LogInView.class.getName()).log(Level.SEVERE, null, ex);
-       } catch (SQLException ex) {
-           Logger.getLogger(LogInView.class.getName()).log(Level.SEVERE, null, ex);
-       }
-        if(evt.getKeyCode() == KeyEvent.VK_UP)
-            txtUsername.requestFocus();
-        if(evt.getKeyCode() == KeyEvent.VK_DOWN)
-            ShowPassword.requestFocus();
-    }//GEN-LAST:event_txtPasswordKeyPressed
-
-    private void LoginButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginButtonKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_UP)
-            ShowPassword.requestFocus();
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER)
-            try {
-                login();
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER )
+        try {
+            login();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(LogInView.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(LogInView.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_LoginButtonKeyPressed
-
-    private void ShowPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ShowPasswordKeyPressed
-        if(evt.getKeyCode() == KeyEvent.VK_ENTER)
-            ShowPassword.doClick();
         if(evt.getKeyCode() == KeyEvent.VK_UP)
-            txtPassword.requestFocus();
+        txtUsername.requestFocus();
         if(evt.getKeyCode() == KeyEvent.VK_DOWN)
-            LoginButton.requestFocus();
-    }//GEN-LAST:event_ShowPasswordKeyPressed
+        ShowPassword.requestFocus();
+    }//GEN-LAST:event_txtPasswordKeyPressed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
-        
+
     }//GEN-LAST:event_txtPasswordActionPerformed
 
-    private void ShowPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowPasswordActionPerformed
-        if(ShowPassword.isSelected())
-            txtPassword.setEchoChar((char)0);
-        else 
-            txtPassword.setEchoChar('*');
-    }//GEN-LAST:event_ShowPasswordActionPerformed
-
+    private void txtUsernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUsernameKeyPressed
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER || evt.getKeyCode() == KeyEvent.VK_DOWN)
+        txtPassword.requestFocus();
+    }//GEN-LAST:event_txtUsernameKeyPressed
+    private void login() throws ClassNotFoundException, SQLException{
+        String user = txtUsername.getText();
+        String pass = String.valueOf(txtPassword.getPassword());
+        controllers.mng.MngLoginController.mngLogin(user, pass);
+        if(controllers.mng.MngLoginController.getCheck()){
+            this.dispose();
+            new MainFrame1().setVisible(true);
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -268,6 +281,7 @@ public class LogInView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
