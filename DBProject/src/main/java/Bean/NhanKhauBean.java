@@ -1,6 +1,8 @@
 package Bean;
 
+import java.util.Date;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import models.ChungMinhThuModel;
 import models.GiaDinhModel;
@@ -62,43 +64,76 @@ public class NhanKhauBean {
     
     @Override
     public String toString() {
-        String res =  "<html><style>p {padding: 5px; margin-left: 20px} table, th, td {border: 1px solid black; border-collapse: collapse;} table {width: 500px}</style> <div>"
-                + "<h1>Thông tin cơ bản:"
-                + "<p>Họ Tên: <b>" + nhanKhauModel.getHoTen() + "</p>"
-                + "<p>Năm Sinh: <b>" + nhanKhauModel.getNamSinh() + "</p>"
-                + "<p>Giới Tính: <b>" + nhanKhauModel.getGioiTinh() + "</p>"
-                + "<p>Nguyên Quán: <b>" + nhanKhauModel.getNguyenQuan()+ "</p>"
-                + "<p>Dân Tộc: <b>" + nhanKhauModel.getDanToc()+ "</p>"
-                + "<p>Tôn Giáo: <b>" + nhanKhauModel.getTonGiao()+ "</p>"
-                + "<p>Quốc Tịch: <b>" + nhanKhauModel.getQuocTich()+ "</p>"
-                + "<p>Số CMT: <b>" + chungMinhThuModel.getSoCMT()+ "</p>"
-                + "<p>Hộ Chiếu Số : <b>" + nhanKhauModel.getSoHoChieu()+ "</p>"
-                + "<p>Nơi Thường Trú : <b>" + nhanKhauModel.getNoiThuongTru()+ "</p>"
-                + "<p>Địa Chỉ Hiện Tại : <b>" + nhanKhauModel.getDiaChiHienNay()+ "</p>"
-                + "<h1>Tiểu sử<table>"
-                        + "<tr>"
-                        + "<th>Từ ngày</th>"
-                        + "<th>Đến ngày</th>"
-                        + "<th>Địa chỉ</th>"
-                        + "<th>Nơi làm việc</th>"
-                        + "</tr>";
-        for (TieuSuModel tieuSuModel: listTieuSuModels) {
-            res += "<tr>"
-                    + "<td>"
-                    + tieuSuModel.getTuNgay().toString()
-                    + "</td>"
-                    + "<td>"
-                    + tieuSuModel.getDenNgay().toString()
-                    + "</td>"
-                    + "<td>"
-                    + tieuSuModel.getDiaChi()
-                    + "</td>"
-                    + "<td>"
-                    + tieuSuModel.getNoiLamViec()
-                    + "</td>"
-                    + "</tr>";
+        StringBuilder res = new StringBuilder();
+        res.append("<html>");
+            res.append("<style>")
+            .append("table {")
+            .append("    border-collapse: collapse;")
+            .append("    width: 580px")
+            .append("}")
+            .append("h1 {text-align: center;}")
+            .append("p {padding: 5px; margin-left: 20px}")
+            .append("th, td {")
+            .append("    padding: 8px;")
+            .append("    text-align: left;")
+            .append("    border-bottom: 1px solid #ddd;")
+            .append("}")
+            .append("th {")
+            .append("    background-color: #f2f2f2;")
+            .append("}")
+            .append(".section {")
+            .append("    margin-bottom: 10px;")
+            .append("    width: 580px;")
+            .append("}")
+            .append(".table-title {")
+            .append("    text-align: center;")
+            .append("}")
+            .append("</style>")
+            .append("<div class='section'>")
+            .append("<h1>").append(nhanKhauModel.getHoTen()).append("-").append(getYearFromDate(nhanKhauModel.getNamSinh())).append("</h1>")
+            .append("</div>");
+
+        res.append("<div class='section'>")
+            .append("<h2>Thông tin cơ bản:")
+            .append("<p>Họ Tên: <b>").append(nhanKhauModel.getHoTen()).append("</p>")
+            .append("<p>Năm Sinh: <b>").append(nhanKhauModel.getNamSinh()).append("</p>")
+            .append("<p>Giới Tính: <b>").append(nhanKhauModel.getGioiTinh()).append("</p>")
+            .append("<p>Nguyên Quán: <b>").append(nhanKhauModel.getNguyenQuan()).append("</p>")
+            .append("<p>Dân Tộc: <b>").append(nhanKhauModel.getDanToc()).append("</p>")
+            .append("<p>Tôn Giáo: <b>").append(nhanKhauModel.getTonGiao()).append("</p>")
+            .append("<p>Quốc Tịch: <b>").append(nhanKhauModel.getQuocTich()).append("</p>")
+            .append("<p>Số CMT: <b>").append(chungMinhThuModel.getSoCMT()).append("</p>")
+            .append("<p>Hộ Chiếu Số : <b>").append(nhanKhauModel.getSoHoChieu()).append("</p>")
+            .append("<p>Nơi Thường Trú : <b>").append(nhanKhauModel.getNoiThuongTru()).append("</p>")
+            .append("<p>Địa Chỉ Hiện Tại : <b>").append(nhanKhauModel.getDiaChiHienNay()).append("</p>")
+            .append("</div>");
+
+        if (listTieuSuModels.size() > 0) {
+            res.append("<h2>Thông tin phụ:<table>")
+            .append("<tr>")
+            .append("<th>Từ ngày</th>")
+            .append("<th>Đến ngày</th>")
+            .append("<th>Địa chỉ</th>")
+            .append("<th>Nơi làm việc</th>")
+            .append("</tr>");
         }
-        res += "</table>"+ "</div></html>";
-        return res;
+
+        for (TieuSuModel tieuSuModel : listTieuSuModels) {
+            res.append("<tr>")
+                .append("<td>").append(tieuSuModel.getTuNgay().toString()).append("</td>")
+                .append("<td>").append(tieuSuModel.getDenNgay().toString()).append("</td>")
+                .append("<td>").append(tieuSuModel.getDiaChi()).append("</td>")
+                .append("<td>").append(tieuSuModel.getNoiLamViec()).append("</td>")
+                .append("</tr>");
+        }
+
+        res.append("</table></div></html>");
+        return res.toString();
     }
+
+    private int getYearFromDate(Date date) {
+    Calendar calendar = Calendar.getInstance();
+    calendar.setTime(date);
+    return calendar.get(Calendar.YEAR);
+}
 }

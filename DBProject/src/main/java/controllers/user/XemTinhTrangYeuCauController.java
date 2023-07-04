@@ -8,9 +8,11 @@ package controllers.user;
 import java.sql.*;
 import java.util.ArrayList;
 import models.TinhTrangYeuCau;
-import services.MysqlConnection;
+
 import java.util.*;
 import javax.swing.*;
+
+import database.MysqlConnection;
 
 
 //Cần xem lại

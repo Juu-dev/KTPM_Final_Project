@@ -275,13 +275,13 @@
             </Component>
             <Component class="javax.swing.JButton" name="CreateBtn">
               <Properties>
+                <Property name="text" type="java.lang.String" value="X&#xe1;c nh&#x1ead;n"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d7" green="87" red="20" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="X&#xe1;c nh&#x1ead;n"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreateBtnActionPerformed"/>
@@ -289,10 +289,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="CancelBtn">
               <Properties>
+                <Property name="text" type="java.lang.String" value="H&#x1ee7;y"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="H&#x1ee7;y"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CancelBtnActionPerformed"/>
@@ -300,18 +300,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
+                <Property name="text" type="java.lang.String" value="1. H&#x1ecd; v&#xe0; t&#xea;n:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="1. H&#x1ecd; v&#xe0; t&#xea;n:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
+                <Property name="text" type="java.lang.String" value="2. H&#x1ecd; v&#xe0; t&#xea;n g&#x1ecd;i kh&#xe1;c (n&#x1ebf;u c&#xf3;):"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="2. H&#x1ecd; v&#xe0; t&#xea;n g&#x1ecd;i kh&#xe1;c (n&#x1ebf;u c&#xf3;):"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="bietDanhTxb">
@@ -336,18 +336,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
+                <Property name="text" type="java.lang.String" value="6. Nguy&#xea;n qu&#xe1;n:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="6. Nguy&#xea;n qu&#xe1;n:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
+                <Property name="text" type="java.lang.String" value="3. Ng&#xe0;y th&#xe1;ng n&#x103;m sinh:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="3. Ng&#xe0;y th&#xe1;ng n&#x103;m sinh:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="danTocTxb">
@@ -372,18 +372,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel10">
               <Properties>
+                <Property name="text" type="java.lang.String" value="10. S&#x1ed1; CMT/CCCD:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="10. S&#x1ed1; CMT/CCCD:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel12">
               <Properties>
+                <Property name="text" type="java.lang.String" value="7. D&#xe2;n t&#x1ed9;c:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="7. D&#xe2;n t&#x1ed9;c:"/>
               </Properties>
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="namSinhDateC">
@@ -395,14 +395,14 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="gioiTinhCbb">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="18" style="0"/>
-                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
                     <StringItem index="0" value="Nam"/>
                     <StringItem index="1" value="N&#x1eef;"/>
                   </StringArray>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
               </Properties>
               <Events>
@@ -414,18 +414,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
+                <Property name="text" type="java.lang.String" value="4. Gi&#x1edb;i t&#xed;nh:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="4. Gi&#x1edb;i t&#xed;nh:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
+                <Property name="text" type="java.lang.String" value="8. T&#xf4;n gi&#xe1;o:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="8. T&#xf4;n gi&#xe1;o:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="tonGiaoTxb">
@@ -450,10 +450,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel15">
               <Properties>
+                <Property name="text" type="java.lang.String" value="9. Qu&#x1ed1;c t&#x1ecb;ch:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="9. Qu&#x1ed1;c t&#x1ecb;ch:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="soHoChieuTxb">
@@ -468,26 +468,26 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel17">
               <Properties>
+                <Property name="text" type="java.lang.String" value="11. H&#x1ed9; chi&#x1ebf;u s&#x1ed1;:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="11. H&#x1ed9; chi&#x1ebf;u s&#x1ed1;:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel19">
               <Properties>
+                <Property name="text" type="java.lang.String" value="13. &#x110;&#x1ecb;a ch&#x1ec9; hi&#x1ec7;n t&#x1ea1;i:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="13. &#x110;&#x1ecb;a ch&#x1ec9; hi&#x1ec7;n t&#x1ea1;i:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel20">
               <Properties>
+                <Property name="text" type="java.lang.String" value="12. N&#x1a1;i th&#x1b0;&#x1edd;ng tr&#xfa;:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="12. N&#x1a1;i th&#x1b0;&#x1edd;ng tr&#xfa;:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="noiThuongTruTxb">
@@ -522,10 +522,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel24">
               <Properties>
+                <Property name="text" type="java.lang.String" value="15. Tr&#xec;nh &#x111;&#x1ed9; chuy&#xea;n m&#xf4;n:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="15. Tr&#xec;nh &#x111;&#x1ed9; chuy&#xea;n m&#xf4;n:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="trinhDoChuyenMonTxb">
@@ -540,18 +540,18 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel26">
               <Properties>
+                <Property name="text" type="java.lang.String" value="14. Tr&#xec;nh &#x111;&#x1ed9; h&#x1ecd;c v&#x1ea5;n:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="14. Tr&#xec;nh &#x111;&#x1ed9; h&#x1ecd;c v&#x1ea5;n:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel27">
               <Properties>
+                <Property name="text" type="java.lang.String" value="17. Tr&#xec;nh &#x111;&#x1ed9; ngo&#x1ea1;i ng&#x1eef;:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="17. Tr&#xec;nh &#x111;&#x1ed9; ngo&#x1ea1;i ng&#x1eef;:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="trinhDoNgoaiNguTxb">
@@ -566,10 +566,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel29">
               <Properties>
+                <Property name="text" type="java.lang.String" value="16. Bi&#x1ebf;t ti&#x1ebf;ng d&#xe2;n t&#x1ed9;c:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="16. Bi&#x1ebf;t ti&#x1ebf;ng d&#xe2;n t&#x1ed9;c:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="bietTiengDanTocTxb">
@@ -584,10 +584,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel31">
               <Properties>
+                <Property name="text" type="java.lang.String" value="18. Ngh&#x1ec1; nghi&#x1ec7;p:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="18. Ngh&#x1ec1; nghi&#x1ec7;p:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="ngheNghiepTxb">
@@ -602,10 +602,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel33">
               <Properties>
+                <Property name="text" type="java.lang.String" value="19. N&#x1a1;i l&#xe0;m vi&#x1ec7;c:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="19. N&#x1a1;i l&#xe0;m vi&#x1ec7;c:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="noiLamViecTxb">
@@ -634,19 +634,19 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="B&#x1ea3;n khai nh&#xe2;n kh&#x1ea9;u"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="24" style="1"/>
                 </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="B&#x1ea3;n khai nh&#xe2;n kh&#x1ea9;u"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel36">
               <Properties>
+                <Property name="text" type="java.lang.String" value="5. N&#x1a1;i sinh:"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="5. N&#x1a1;i sinh:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="noiSinhTxb">
@@ -658,10 +658,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
+                <Property name="text" type="java.lang.String" value="21. Ti&#x1ec1;n &#xe1;n (t&#x1ed9;i danh, h&#xec;nh ph&#x1ea1;t, theo b&#x1ea3;n &#xe1;n s&#x1ed1;, ng&#xe0;y, th&#xe1;ng n&#x103;m c&#x1ee7;a T&#xf2;a &#xe1;n):"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="21. Ti&#x1ec1;n &#xe1;n (t&#x1ed9;i danh, h&#xec;nh ph&#x1ea1;t, theo b&#x1ea3;n &#xe1;n s&#x1ed1;, ng&#xe0;y, th&#xe1;ng n&#x103;m c&#x1ee7;a T&#xf2;a &#xe1;n):"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="tienAnTxb">
@@ -673,10 +673,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
+                <Property name="text" type="java.lang.String" value="20. T&#xf3;m t&#x1eaf;t v&#x1ec1; b&#x1ea3;n th&#xe2;n"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="20. T&#xf3;m t&#x1eaf;t v&#x1ec1; b&#x1ea3;n th&#xe2;n"/>
               </Properties>
             </Component>
           </SubComponents>

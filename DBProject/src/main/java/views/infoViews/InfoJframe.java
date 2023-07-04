@@ -63,6 +63,7 @@ public class InfoJframe extends javax.swing.JFrame {
         contentJlb.setText("jLabel1");
         contentJlb.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         contentJlb.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        contentJlb.setMaximumSize(new java.awt.Dimension(1000, 41));
         jScrollPane1.setViewportView(contentJlb);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -109,5 +110,9 @@ public class InfoJframe extends javax.swing.JFrame {
 
     public void setjPanel1(JPanel jPanel1) {
         this.jPanel1 = jPanel1;
+    }
+
+    public void setWidth(int i) {
+        this.setSize(i, this.getHeight());
     }
 }

@@ -16,7 +16,7 @@ import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumnModel;
 
 import controllers.manager.PheDuyetYeuCauNguoiDung;
-import controllers.manager.ThongTinNguoiSuDungController;
+import controllers.manager.nhaVanHoa.ThongTinNguoiSuDungController;
 
 import java.awt.Toolkit;
 import models.ThongTinNguoSuDungModels;

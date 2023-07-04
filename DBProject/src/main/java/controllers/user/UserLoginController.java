@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 package controllers.user;
-import services.MysqlConnection;
 import java.sql.*;
 import java.util.Date;
+
+import database.MysqlConnection;
 
 
 /*

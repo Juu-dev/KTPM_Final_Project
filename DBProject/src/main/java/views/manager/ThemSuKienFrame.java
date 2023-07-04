@@ -15,8 +15,8 @@ import java.util.Date;
 
 import javax.swing.JOptionPane;
 
-import controllers.manager.LenLichSuKienController;
 import controllers.manager.XemLich;
+import controllers.manager.nhaVanHoa.LenLichSuKienController;
 import controllers.user.XemLichSuDungNhaVanHoaController;
 
 import javax.swing.JComboBox;

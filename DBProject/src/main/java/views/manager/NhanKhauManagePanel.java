@@ -51,9 +51,9 @@ public class NhanKhauManagePanel extends javax.swing.JPanel {
         jPanel1.setMaximumSize(new java.awt.Dimension(358, 34));
         jPanel1.setMinimumSize(new java.awt.Dimension(358, 34));
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-search-24.png"))); // NOI18N
-        jLabel2.setBackground(new java.awt.Color(153, 153, 153));
 
         jtfSearch.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jtfSearch.setBorder(null);
@@ -84,36 +84,36 @@ public class NhanKhauManagePanel extends javax.swing.JPanel {
                 .addGap(0, 0, 0))
         );
 
+        tamVangBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tamVangBtn.setText("Đăng kí tạm vắng");
         tamVangBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tamVangBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tamVangBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tamVangBtnActionPerformed(evt);
             }
         });
 
+        addNewBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         addNewBtn.setText("Thêm nhân khẩu mới");
         addNewBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addNewBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         addNewBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addNewBtnActionPerformed(evt);
             }
         });
 
+        tamTruBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tamTruBtn.setText("Đăng kí tạm trú");
         tamTruBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tamTruBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tamTruBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tamTruBtnActionPerformed(evt);
             }
         });
 
+        khaiTuBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         khaiTuBtn.setText("Khai tử");
         khaiTuBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        khaiTuBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         khaiTuBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 khaiTuBtnActionPerformed(evt);

@@ -3,7 +3,7 @@ package views.manager.peopleFrame;
 import Bean.NhanKhauBean;
 import controllers.LoginController;
 import controllers.NhanKhauManagerPanelController;
-import controllers.manager.peopleController.AddNewController;
+import controllers.manager.people.AddNewController;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

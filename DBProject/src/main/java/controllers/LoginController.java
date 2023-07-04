@@ -5,8 +5,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import database.MysqlConnection;
 import models.UserMoldel;
-import services.MysqlConnection;
 
 
 public class LoginController {

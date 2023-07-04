@@ -10,12 +10,14 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import models.XemLichSuDung;
+
 import java.util.*;
 import java.util.ArrayList;
-import services.MysqlConnection;
 import java.sql.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+
+import database.MysqlConnection;
 
 
 public class XemLichSuDungNhaVanHoaController {

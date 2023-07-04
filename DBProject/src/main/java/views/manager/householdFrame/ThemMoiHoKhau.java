@@ -3,7 +3,7 @@ package views.manager.householdFrame;
 import Bean.HoKhauBean;
 import Bean.MemOfFamily;
 import Bean.NhanKhauBean;
-import controllers.manager.householdController.ThemMoiController;
+import controllers.manager.household.ThemMoiController;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

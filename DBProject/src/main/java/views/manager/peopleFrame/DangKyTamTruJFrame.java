@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import controllers.manager.peopleController.DangKyTamTruController;
+import controllers.manager.people.DangKyTamTruController;
 import models.TamTruModel;
 
 

@@ -5,7 +5,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import controllers.manager.peopleController.KhaiTuController;
+import controllers.manager.people.KhaiTuController;
 import models.KhaiTuModel;
 
 public class KhaiTuJFrame extends javax.swing.JFrame {
@@ -82,6 +82,7 @@ public class KhaiTuJFrame extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Số giấy khai tử:");
 
         jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -131,7 +132,7 @@ public class KhaiTuJFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jButton1.setText("Kiểm tra");
+        jButton1.setText("Xác thực CMT/CCCD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -206,7 +207,7 @@ public class KhaiTuJFrame extends javax.swing.JFrame {
                                         .addComponent(jButton1)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel8)
-                                        .addGap(143, 275, Short.MAX_VALUE))
+                                        .addGap(143, 177, Short.MAX_VALUE))
                                     .addComponent(jTextField3)
                                     .addComponent(jTextField5)))
                             .addGroup(jPanel1Layout.createSequentialGroup()

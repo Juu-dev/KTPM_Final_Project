@@ -9,12 +9,12 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import services.MysqlConnection;
 
 import javax.swing.JOptionPane;
 
-import controllers.manager.CapNhatCoSoVatChat;
+import controllers.manager.nhaVanHoa.CapNhatCoSoVatChat;
 import controllers.user.XemLichSuDungNhaVanHoaController;
+import database.MysqlConnection;
 
 public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
 

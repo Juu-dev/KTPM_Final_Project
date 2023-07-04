@@ -5,14 +5,16 @@
  */
 package controllers.manager;
 
-import services.MysqlConnection;
 import models.DonYeuCau;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.sql.*;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+
+import database.MysqlConnection;
 
 
 public class PheDuyetYeuCauNguoiDung {

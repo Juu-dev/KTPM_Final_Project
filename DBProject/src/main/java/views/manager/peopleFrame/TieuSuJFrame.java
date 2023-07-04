@@ -1,7 +1,7 @@
 package views.manager.peopleFrame;
 
 import Bean.NhanKhauBean;
-import controllers.manager.peopleController.TieuSuController;
+import controllers.manager.people.TieuSuController;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

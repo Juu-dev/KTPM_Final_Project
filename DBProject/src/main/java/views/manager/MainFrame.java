@@ -15,12 +15,18 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import models.ThongTinCoSoVatChat;
 import models.TinhTrangYeuCau;
-import services.MysqlConnection;
+import controllers.ThongKePanelController;
 import controllers.manager.*;
+import controllers.manager.nhaVanHoa.CapNhatCoSoVatChat;
+import controllers.manager.nhaVanHoa.MainFrameController;
+import controllers.manager.nhaVanHoa.ThongTinNguoiDungDangKy;
 import controllers.user.XemLichSuDungNhaVanHoaController;
+import database.MysqlConnection;
 
 
 public class MainFrame extends javax.swing.JFrame {
+
+    private MainFrameController controller;
 
     /**
      * Creates new form MainFrame
@@ -28,6 +34,9 @@ public class MainFrame extends javax.swing.JFrame {
     public MainFrame() {
         initComponents();
         setLocationRelativeTo(null);
+
+        this.controller = new MainFrameController(jTableLich, jTableDonDangKy);
+        this.controller.setDataTable();
         
         jComboBoxVatPhamUpdate();
         XemLichSuDung();
@@ -235,7 +244,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanelLichLayout.setVerticalGroup(
             jPanelLichLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
         );
 
         jPanelDonDangKy.setBackground(new java.awt.Color(32, 107, 166));
@@ -408,8 +417,8 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelCentre.setLayout(new java.awt.CardLayout());
 
         jPanelTrangChuCentre.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelTrangChuCentre.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanelTrangChuCentre.setForeground(new java.awt.Color(0, 0, 0));
+        jPanelTrangChuCentre.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jButton1.setText("Thêm sự kiện");
         jButton1.setAutoscrolls(true);
@@ -480,13 +489,13 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(225, 225, 225));
 
+        jLabel24.setText("PHẠM MINH THỐNG");
         jLabel24.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("PHẠM MINH THỐNG");
 
+        jLabel25.setText("Tổ trưởng");
         jLabel25.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel25.setText("Tổ trưởng");
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-avatar-80.png"))); // NOI18N
 
@@ -591,6 +600,8 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jTableLich.setBackground(new java.awt.Color(204, 204, 204));
+        jTableLich.setRowHeight(50);
+        jTableLich.setToolTipText("");
         jTableLich.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableLichMouseClicked(evt);

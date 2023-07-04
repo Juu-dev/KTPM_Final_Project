@@ -47,7 +47,7 @@ public class HoKhauManagePanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        themMoiBtn.setText("Thêm mới");
+        themMoiBtn.setText("Thêm hộ khẩu mới");
         themMoiBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         themMoiBtn.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         themMoiBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +73,8 @@ public class HoKhauManagePanel extends javax.swing.JPanel {
                 chuyenDiBtnActionPerformed(evt);
             }
         });
+
+        tableJpn.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout tableJpnLayout = new javax.swing.GroupLayout(tableJpn);
         tableJpn.setLayout(tableJpnLayout);
@@ -123,12 +125,12 @@ public class HoKhauManagePanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(themMoiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(themMoiBtn)
                 .addGap(18, 18, 18)
                 .addComponent(tachHoKhauBtn)
                 .addGap(18, 18, 18)
                 .addComponent(chuyenDiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(410, Short.MAX_VALUE))
+                .addContainerGap(367, Short.MAX_VALUE))
             .addComponent(tableJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)

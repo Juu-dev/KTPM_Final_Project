@@ -6,7 +6,7 @@
 package views.manager.householdFrame;
 
 import Bean.MemOfFamily;
-import controllers.manager.householdController.ChangeListPeopleController;
+import controllers.manager.household.ChangeListPeopleController;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

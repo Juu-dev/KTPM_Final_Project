@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import controllers.manager.peopleController.DangKyTamVangController;
+import controllers.manager.people.DangKyTamVangController;
 import models.TamVangModel;
 
 

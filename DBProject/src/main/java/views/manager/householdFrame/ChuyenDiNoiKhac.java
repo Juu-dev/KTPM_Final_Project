@@ -1,7 +1,7 @@
 package views.manager.householdFrame;
 
 import Bean.HoKhauBean;
-import controllers.manager.householdController.ChuyenDiNoiKhacController;
+import controllers.manager.household.ChuyenDiNoiKhacController;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

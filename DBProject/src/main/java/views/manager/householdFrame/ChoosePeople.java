@@ -1,7 +1,7 @@
 package views.manager.householdFrame;
 
 import Bean.NhanKhauBean;
-import controllers.manager.householdController.ChoosePeopleController;
+import controllers.manager.household.ChoosePeopleController;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

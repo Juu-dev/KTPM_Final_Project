@@ -1,6 +1,9 @@
 package controllers;
 
 import Bean.HoKhauBean;
+import utility.HeaderRenderer;
+import mysqlSubsystem.HoKhau;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -8,6 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.EventObject;
 import java.util.List;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -16,16 +20,18 @@ import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
-import services.HoKhauService;
-import utility.TableModelHoKhau;
-import views.infoViews.InfoJframe;
+import javax.swing.table.TableRowSorter;
 
+import utility.CustomTableCellRenderer;
+import utility.TableModelHoKhau;
+
+import views.infoViews.InfoJframe;
 
 public class HoKhauPanelController {
     private List<HoKhauBean> list;
     private JTextField searchJtf;
     private JPanel tableJpn;
-    private final HoKhauService hoKhauService = new HoKhauService();
+    private final HoKhau hoKhauService = new HoKhau();
     private final TableModelHoKhau tableModelHoKhau = new TableModelHoKhau();
     private final String COLUNMS[] = {"Mã hộ khẩu", "Họ tên chủ hộ", "Địa chỉ"}; 
     private JFrame parentJFrame;
@@ -85,12 +91,22 @@ public class HoKhauPanelController {
             }
             
         };
-        table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
+
+        TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
+        table.setRowSorter(sorter);
+        
+        // Định dạng header
+        table.getTableHeader().setDefaultRenderer(new HeaderRenderer());
         table.getTableHeader().setPreferredSize(new Dimension(100, 50));
+
+        // Màu sắc hàng chẵn/lẻ
+        table.setDefaultRenderer(Object.class, new CustomTableCellRenderer());
+
         table.setRowHeight(50);
-        table.validate();
-        table.repaint();
-        table.setFont(new Font("Arial", Font.PLAIN, 14));
+        table.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+        table.getColumnModel().getColumn(0).setMaxWidth(100);
+        table.getColumnModel().getColumn(0).setMinWidth(100);
+        table.getColumnModel().getColumn(0).setPreferredWidth(100);
         table.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -101,11 +117,11 @@ public class HoKhauPanelController {
                     infoJframe.setVisible(true);
                 }
             }
-            
         });
-        
-        JScrollPane scroll = new JScrollPane();
-        scroll.getViewport().add(table);
+
+        JScrollPane scroll = new JScrollPane(table);
+        scroll.setPreferredSize(new Dimension(1350, 400));
+
         tableJpn.removeAll();
         tableJpn.setLayout(new BorderLayout());
         tableJpn.add(scroll);
