@@ -15,6 +15,7 @@ public class ClassTableModel {
     // bang cho main frame
     public DefaultTableModel setTableNhanKhau(List<NhanKhauModel> listItem, String[] listColumn) {
         final int columns = listColumn.length;
+
         DefaultTableModel dtm = new DefaultTableModel()  {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -25,8 +26,10 @@ public class ClassTableModel {
                 return columnIndex == 5 ? Boolean.class : String.class;
             }
         };
+
         dtm.setColumnIdentifiers(listColumn);
         Object[] obj;
+
         obj = new Object[columns];
         listItem.forEach((NhanKhauModel item) -> {
             obj[0] = item.getID();
@@ -36,6 +39,7 @@ public class ClassTableModel {
             obj[4] = item.getDiaChiHienNay();
             dtm.addRow(obj);
         });
+
         return dtm;
     }
     // table cho tieusu
@@ -80,6 +84,7 @@ public class ClassTableModel {
 //        });
         return dtm;
     }
+    
     public DefaultTableModel setTableGiaDinh(List<GiaDinhModel> giaDinh, String[] listColumn) {
         final int column = listColumn.length;
         

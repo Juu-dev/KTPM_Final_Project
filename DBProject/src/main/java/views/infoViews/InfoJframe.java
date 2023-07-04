@@ -51,6 +51,7 @@ public class InfoJframe extends javax.swing.JFrame {
         contentJlb = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -61,6 +62,7 @@ public class InfoJframe extends javax.swing.JFrame {
         contentJlb.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         contentJlb.setText("jLabel1");
         contentJlb.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        contentJlb.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
         jScrollPane1.setViewportView(contentJlb);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

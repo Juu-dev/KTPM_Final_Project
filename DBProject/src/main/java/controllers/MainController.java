@@ -5,6 +5,12 @@
 package controllers;
 
 import Bean.DanhMucBean;
+import views.manager.HoKhauManagePanel;
+import views.manager.HomePagePanel;
+import views.manager.NhanKhauManagePanel;
+import views.manager.ThongKePanel;
+import views.manager.TimKiemPanel;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -13,11 +19,6 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import views.mng.HoKhauManagePanel;
-import views.mng.HomePagePanel;
-import views.mng.NhanKhauManagePanel;
-import views.mng.ThongKePanel;
-import views.mng.TimKiemPanel;
 
 
 public class MainController {
