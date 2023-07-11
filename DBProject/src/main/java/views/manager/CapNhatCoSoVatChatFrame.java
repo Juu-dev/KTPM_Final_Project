@@ -68,6 +68,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
         jComboBoxVatPham = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextFieldThongTin = new javax.swing.JTextArea();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cập nhật thông tin cơ sở vật chất");
@@ -92,6 +93,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jButtonXacNhan.setText("Xác nhận");
+        jButtonXacNhan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonXacNhan.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButtonXacNhan.setForeground(new java.awt.Color(32, 135, 215));
         jButtonXacNhan.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +103,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
         });
 
         jButtonLamMoi.setText("Làm mới");
+        jButtonLamMoi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonLamMoi.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButtonLamMoi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +112,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
         });
 
         jButtonHuy.setText("Hủy");
+        jButtonHuy.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonHuy.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButtonHuy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +135,10 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
         jTextFieldThongTin.setRows(5);
         jTextFieldThongTin.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jScrollPane1.setViewportView(jTextFieldThongTin);
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Cập nhật cơ sở vật chất");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,11 +172,14 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
                             .addComponent(datePicker, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane1))
                 .addContainerGap(56, Short.MAX_VALUE))
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel3)
@@ -185,7 +196,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonLamMoi)
@@ -280,6 +291,7 @@ public class CapNhatCoSoVatChatFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerSoLuong;
     private javax.swing.JTextArea jTextFieldThongTin;

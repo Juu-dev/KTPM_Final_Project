@@ -30,7 +30,7 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         jLabelMota.setText((String)model.getValueAt(index, 5));
-        jLabel1.setText((String)model.getValueAt(index, 1));
+        jLabelUsername.setText("Tên người dùng: " +(String)model.getValueAt(index, 1));
         jLabelThoigian.setText("Thời gian từ:   "+(String)model.getValueAt(index, 2)+"   đến:   " +(String)model.getValueAt(index, 3));
     }
     public ChapNhanYeuCau(){
@@ -98,90 +98,101 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
 
         jLabelMota = new javax.swing.JLabel();
         jLabelThoigian = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelUsername = new javax.swing.JLabel();
         jLabelghichu = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabelphi = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabelMota.setText("Mô tả:");
         jLabelMota.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabelMota.setText("Mô tả:");
 
-        jLabelThoigian.setText("Thời gian từ: ");
         jLabelThoigian.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabelThoigian.setText("Thời gian từ: ");
 
-        jLabel1.setText("Tên người dùng:");
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabelUsername.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabelUsername.setText("Tên người dùng:");
 
-        jLabelghichu.setText("Ghi chú:");
         jLabelghichu.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabelghichu.setText("Ghi chú:");
 
-        jLabelphi.setText("Phí sử dụng:");
         jLabelphi.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabelphi.setText("Phí sử dụng:");
 
-        jButton1.setText("Chấp thuận");
         jButton1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(32, 135, 215));
+        jButton1.setText("Chấp thuận");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Từ chối");
         jButton2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jButton2.setText("Từ chối");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Xử lý yêu cầu");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelMota)
                     .addComponent(jLabelThoigian)
-                    .addComponent(jLabel1)
+                    .addComponent(jLabelUsername)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(237, 237, 237)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelphi)
-                            .addComponent(jLabelghichu))
-                        .addGap(18, 18, 18)
+                            .addComponent(jLabelghichu)
+                            .addComponent(jLabelphi))
+                        .addGap(9, 9, 9)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(125, 125, 125)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton1)))))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1)
-                .addGap(33, 33, 33)
+                .addGap(5, 5, 5)
+                .addComponent(jLabel2)
+                .addGap(27, 27, 27)
+                .addComponent(jLabelUsername)
+                .addGap(18, 18, 18)
                 .addComponent(jLabelThoigian)
-                .addGap(36, 36, 36)
+                .addGap(18, 18, 18)
                 .addComponent(jLabelMota)
-                .addGap(71, 71, 71)
+                .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelghichu)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelphi)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
@@ -250,9 +261,10 @@ public class ChapNhanYeuCau extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelMota;
     private javax.swing.JLabel jLabelThoigian;
+    private javax.swing.JLabel jLabelUsername;
     private javax.swing.JLabel jLabelghichu;
     private javax.swing.JLabel jLabelphi;
     private javax.swing.JTextField jTextField1;

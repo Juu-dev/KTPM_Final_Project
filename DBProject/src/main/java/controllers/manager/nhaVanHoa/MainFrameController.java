@@ -2,7 +2,14 @@ package controllers.manager.nhaVanHoa;
 
 import java.awt.Dimension;
 import java.awt.Font;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.swing.JLabel;
 import javax.swing.JTable;
+
+import database.MysqlConnection;
 import utility.CustomTableCellRenderer;
 
 
@@ -10,11 +17,18 @@ import utility.CustomTableCellRenderer;
 public class MainFrameController {
     private JTable jTableLich;
     private JTable jTableDonDangKy;
-    
+    private JLabel jLabelSoDonDKChuaXL;
+    private JLabel jLabelSoDonDKDaXL;
+    private JLabel jLabelSoCSVC;
+    private JLabel jLabelSoCSVCSanCo;
 
-    public MainFrameController(JTable jTableLich, JTable jTableDonDangKy) {
+    public MainFrameController(JTable jTableLich, JTable jTableDonDangKy,JLabel jLabelSoDonDKChuaXL,JLabel jLabelSoDonDKDaXL,JLabel jLabelSoCSVC,JLabel jLabelSoCSVCSanCo) {
         this.jTableDonDangKy = jTableDonDangKy;
         this.jTableLich = jTableLich;
+        this.jLabelSoDonDKChuaXL = jLabelSoDonDKChuaXL;
+        this.jLabelSoDonDKDaXL = jLabelSoDonDKDaXL;
+        this.jLabelSoCSVC = jLabelSoCSVC;
+        this.jLabelSoCSVCSanCo = jLabelSoCSVCSanCo;
     }
     
     public void setDataTable() {
@@ -43,6 +57,45 @@ public class MainFrameController {
         this.jTableDonDangKy.getColumnModel().getColumn(0).setMaxWidth(100);
         this.jTableDonDangKy.getColumnModel().getColumn(0).setMinWidth(100);
         this.jTableDonDangKy.getColumnModel().getColumn(0).setPreferredWidth(100);
+
+        try {
+            Connection connection = MysqlConnection.getMysqlConnection();
+
+            String query = "SELECT COUNT(*) AS tongRequest FROM request";
+            PreparedStatement preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                this.jLabelSoDonDKChuaXL.setText(String.valueOf(rs.getInt("tongRequest")));
+            }
+            preparedStatement.close();
+            
+            query = "SELECT COUNT(*) AS tong FROM approve";
+            preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                this.jLabelSoDonDKDaXL.setText(String.valueOf(rs.getInt("tong")));
+            }
+            preparedStatement.close();
+            
+            query = "SELECT COUNT(*) AS tong FROM infrastructure";
+            preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                this.jLabelSoCSVC.setText(String.valueOf(rs.getInt("tong")));
+            }
+            preparedStatement.close();
+            
+            query = "SELECT COUNT(*) AS tong FROM room";
+            preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                this.jLabelSoCSVCSanCo.setText(String.valueOf(rs.getInt("tong")));
+            }
+            preparedStatement.close();
+
+            connection.close();
+        } catch (Exception e) {
+        }
     }
 
 

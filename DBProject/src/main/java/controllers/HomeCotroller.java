@@ -13,12 +13,18 @@ public class HomeCotroller {
     private JLabel tongHoKhauLb;
     private JLabel nhanKhauTamTruLb;
     private JLabel nhanKhauTamVangLb;
+    private JLabel khaituLb;
+    private JLabel nhanKhauNamLb;
+    private JLabel nhanKhauNuLb;
 
-    public HomeCotroller(JLabel tongNhanKhauLb, JLabel tongHoKhau, JLabel nhanKhauTamTruLb, JLabel nhanKhauTamVangLb) {
+    public HomeCotroller(JLabel tongNhanKhauLb, JLabel tongHoKhau, JLabel nhanKhauTamTruLb, JLabel nhanKhauTamVangLb, JLabel khaituLb, JLabel nhanKhauNamLb, JLabel nhanKhauNuLb) {
         this.tongNhanKhauLb = tongNhanKhauLb;
         this.tongHoKhauLb = tongHoKhau;
         this.nhanKhauTamTruLb = nhanKhauTamTruLb;
         this.nhanKhauTamVangLb = nhanKhauTamVangLb;
+        this.khaituLb = khaituLb;
+        this.nhanKhauNamLb = nhanKhauNamLb;
+        this.nhanKhauNuLb = nhanKhauNuLb;
     }
     
     public void setData() {
@@ -40,7 +46,7 @@ public class HomeCotroller {
             }
             preparedStatement.close();
             
-            query = "SELECT COUNT(*) AS tong FROM tam_tru WHERE denNgay < NOW()";
+            query = "SELECT COUNT(*) AS tong FROM tam_tru";
             preparedStatement = (PreparedStatement)connection.prepareStatement(query);
             rs = preparedStatement.executeQuery();
             while (rs.next()){
@@ -48,11 +54,38 @@ public class HomeCotroller {
             }
             preparedStatement.close();
             
-            query = "SELECT COUNT(*) AS tong FROM tam_vang WHERE denNgay < NOW()";
+            query = "SELECT COUNT(*) AS tong FROM tam_vang";
             preparedStatement = (PreparedStatement)connection.prepareStatement(query);
             rs = preparedStatement.executeQuery();
             while (rs.next()){
                 this.nhanKhauTamVangLb.setText(String.valueOf(rs.getInt("tong")));
+            }
+            preparedStatement.close();
+
+            // khai tu
+            query = "SELECT COUNT(*) AS tongkhaitu FROM khai_tu";
+            preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                this.khaituLb.setText(String.valueOf(rs.getInt("tongkhaitu")));
+            }
+            preparedStatement.close();
+
+            // nhan khau nam
+            query = "SELECT COUNT(*) AS tongNam FROM nhan_khau WHERE gioiTinh = 'Nam'";
+            preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                this.nhanKhauNamLb.setText(String.valueOf(rs.getInt("tongNam")));
+            }
+            preparedStatement.close();
+
+            // nhan khau nu
+            query = "SELECT COUNT(*) AS tongNu FROM nhan_khau WHERE gioiTinh = 'Nữ'";
+            preparedStatement = (PreparedStatement)connection.prepareStatement(query);
+            rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                this.nhanKhauNuLb.setText(String.valueOf(rs.getInt("tongNu")));
             }
             preparedStatement.close();
             
@@ -93,5 +126,27 @@ public class HomeCotroller {
         this.nhanKhauTamVangLb = nhanKhauTamVangLb;
     }
     
-    
+    public JLabel getKhaituLb() {
+        return khaituLb;
+    }
+
+    public void setKhaituLb(JLabel khaituLb) {
+        this.khaituLb = khaituLb;
+    }
+
+    public JLabel getNhanKhauNamLb() {
+        return nhanKhauNamLb;
+    }
+
+    public void setNhanKhauNamLb(JLabel nhanKhauNamLb) {
+        this.nhanKhauNamLb = nhanKhauNamLb;
+    }
+
+    public JLabel getNhanKhauNuLb() {
+        return nhanKhauNuLb;
+    }
+
+    public void setNhanKhauNuLb(JLabel nhanKhauNuLb) {
+        this.nhanKhauNuLb = nhanKhauNuLb;
+    }
 }
